@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TECH-JUMP: Your One Stop For All Things Technology</title>
+
+    <!--Favicon link-->
+    <link rel="shortcut icon" href="./images/TJ-favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./css/custom.css" rel="stylesheet">
+    <!-- Roboto Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid" id="nav-pad">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html"><span style="font-weight: 400">TECH</span><span style="font-weight: 900">⚡JUMP</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li>
+                        <div class="search">
+                                <form action="" class="search-form">
+                                    <div class="form-group has-feedback">
+                                        <label for="search" class="sr-only">Search</label>
+                                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                        <span class="glyphicon glyphicon-search form-control-feedback" id="search1"></span>
+                                    </div>
+                                </form>
+                        </div>        
+                     </li>
+
+                    <li class="text-center">
+                        <a data-toggle="modal" href="#subscribeModal">
+                            <button class="btn btn-default" name="subscribe" id="subscribe-button" style="background-color: #202020">
+                                SUBSCRIBE &nbsp<span class="glyphicon glyphicon-envelope" style="color: white"></span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="dropdown active text-center" id="categories-li">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown">
+                            <button style="background-color: #202020; border:none">        
+                            CATEGORIES &nbsp<span class="glyphicon glyphicon-th-list"></span>
+                            </button>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="text-center"><a href="./index.html#redirect-1">ENGINEERING</a></li>
+                            <li class="text-center"><a href="./index.html#redirect-2">DESIGN</a></li>
+                            <li class="text-center"><a href="./index.html#redirect-3">NODE.JS</a></li>
+                            <li class="text-center"><a href="./index.html#redirect-4">DEVOPS</a></li>
+                            <li class="text-center"><a href="./index.html#redirect-5">PRODUCT MANAGEMENT</a></li>
+                        </ul>
+                    </li>
+                     <li class="text-center" id="homepage">
+                        <a href="./index.html">
+                            <button class="btn btn-default" name="subscribe" id="subscribe-button" style="background-color: #F5791F; border:none">
+                                TIPPING<span style="font-weight: 900">SCHOOL</span>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of navbar-collapse -->
+        </div>
+        <!-- End of navigation container -->
+    </nav>
+    <!--End of Navigation-->
+
+    <!-- Modals -->
+    <!--Subscribe-Modal-->
+    <div id="subscribeModal" class="modal fade" role="dialog">
+        <!--Mdodal dialog box-->
+        <div class="modal-dialog modal-lg">
+            <!--Modal content-->
+            <div class="modal-content" id="subscribe-modal-content">
+                <!--Modal body-->
+                <div class="modal-body text-center" id="subscribe-modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div>
+                        <h1 style="color:black">YOU FIRST</h1>
+                        <p>Sign up to receive emails on latest trends before anyone else.</p>
+                        <form id="newsletterForm" style="text-align:center">
+                            <input type="email" name="subscribe" placeholder="Enter your email" class="form-control" id="subscribe-email-bar" required>
+                            <br><br>
+                            <button class="btn btn-default" name="subscribe" type="submit" id="subscribe-button" class="form-control">
+                                SUBSCRIBE &nbsp<span class="glyphicon glyphicon-envelope" style="color: white"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+    <!--end of Subscribe Modal-->
+    <!--End of Modals-->
+
+    <div class="row">
+            <div class="row text-left">
+                <div class="col-md-12 cardContainer"></div>
+            </div>
+            
+            <div class="col-md-12">
+
+            </div>   
+        </div>
+
+        <!--end of Category Body-->
+
+    <!-- end of Main Page content-->
+
+    <!--Footer content-->
+    <div class="container" id="footer-container">
+         <div class="row text-center footer-row">
+            <!-- Footer body-->
+            <footer>                
+                <div class="col-lg-12">   
+                    <p> &nbsp &nbsp &nbsp Copyright <span id = "year"></span> &copy; <span style="font-weight: 400">TECH</span><span style="font-weight: 900">JUMP</span><span style="font-weight: 400">.TIPPINGSCHOOL.COM</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- end of Footer content-->
+
+     <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--custom jQuery -->
+    <script src="./js/search.js"></script>
+    
+    <div id="output"></div>
+
+</body>
+</html>
