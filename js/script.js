@@ -111,63 +111,12 @@ $(function() {
     // enter
       $("#search").on('keypress',function(e){
           if(e.key === 'Enter'){
-            
-              var searchTerm = $("#search").val();
-              var url = "http://localhost:4000/search?q="+ searchTerm; 
-              $.ajax({
-              url: url,
-              type: 'GET',
-              contentType: "application/json; charset=utf-8",
-              async: false,
-              dataType: "json",
-              
-              success: function(data, status, jqXHR) {
-                console.log(data);
-                $("#output").html("search");
-                for(var i=0;i<data.length;i++){
-                    $("#output").append("<div><div class='well'><a href="+data[i]["title"]+"> <h2>"
-                    + data[i]["title"]+ "</h2>" + "<p>" + data[i]["description"] + "<p>"
-                    + data[i]["link"]+"</p><p>"+ data[i]["date"]+"</p></p></a></div></div>");
-                }
-  
-              }
-          })
+            e.preventDefault();
+            window.location.replace("search.html");                     
           }
       });
   // click
-      $("#search").on("click", function() {
-        location.reload();
-        
-          var searchTerm = $("#search").val();
-          var url = "http://localhost:4000/search?q="+ searchTerm; 
-          $.ajax({
-              url: url,
-              type: 'GET',
-              contentType: "application/json; charset=utf-8",
-              async: false,
-              dataType: "json",
-
-              success: function(data, status, jqXHR) {
-                  console.log(data);
-                  $("#output").html("search");
-                  for(var i=0;i<data.length;i++){
-                      $("#output").append("<div><div class='well'><a href="+data[i]["title"]+"> <h2>"
-                      + data[i]["title"]+ "</h2>" + "<p>" + data[i]["description"] + "<p>"
-                      + data[i]["link"]+"</p><p>"+ data[i]["date"]+"</p></p></a></div></div>");
-                  }
-  
-              }
-          })
-          .done(function() {
-              console.log("success");
-          })
-          .fail(function() {
-              console.log("error");
-          })
-          .always(function() {
-              console.log("complete");
-          });
-          
-          
+     $("#search").on("click", function() {
+        window.location.replace("search.html");   
       });
   });

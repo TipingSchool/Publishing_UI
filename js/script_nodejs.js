@@ -55,4 +55,17 @@ req.onload = function(){
 
 }
 
+$(function() {
+    // enter
+      $("#search").on('keypress',function(e){
+          if(e.key === 'Enter'){
+            e.preventDefault();
+            window.location.replace("search.html");                     
+          }
+      });
+  // click
+     $("#search").on("click", function() {
+        window.location.replace("search.html");   
+      });
+  });
 

@@ -3,21 +3,30 @@ $(function() {
       $("#search").on('keypress',function(e){
           if(e.key === 'Enter'){
               e.preventDefault();
-
+              $(".cardContainer").empty();
+              
               var searchTerm = $("#search").val();
               var url = "http://localhost:4000/search?q="+ searchTerm; 
+
               $.ajax({
               url: url,
               type: 'GET',
               contentType: "application/json; charset=utf-8",
               async: false,
               dataType: "json",
-              
+
               success: function(data, status, jqXHR) {
+                //$("#output").html();
                 console.log(data);
-                let imageArray = ["./images/Node/Node1.png","./images/Node/Node2.png", "./images/Node/Node3.png", "./images/Node/Node4.png", "./images/Node/Node5.png", "./images/Node/Node6.png", "./images/Node/Node7.png", "./images/Node/Node8.png", "./images/Node/Node9.png", "./images/Node/Node10.png", "./images/Design/Design11.png"];
+               
+                let imageArray = ["./images/Search/Node1.png","./images/Search/Node2.png", "./images/Search/Node3.png", "./images/Search/Node4.png", "./images/Search/Node5.png", "./images/Search/Node6.png", "./images/Search/Node7.png", "./images/Search/Node8.png", "./images/Search/Node9.png", "./images/Search/Node10.png", "./images/Search/Design11.png",
+                                  "./images/Search/Engineering1.png","./images/Search/Engineering2.jpg", "./images/Search/Engineering3.png", "./images/Search/Engineering4.png", "./images/Search/Engineering5.jpg", "./images/Search/Engineering6.jpg", "./images/Search/Engineering7.jpg", "./images/Search/Engineering8.png", "./images/Search/Engineering9.png", "./images/Search/Engineering10.jpg", "./images/Search/Engineering11.png",
+                                  "./images/Search/Design1.png","./images/Search/Design2.png", "./images/Search/Design3.png", "./images/Search/Design4.png", "./images/Search/Design5.png", "./images/Search/Design6.png", "./images/Search/Design7.png", "./images/Search/Design8.png", "./images/Search/Design9.png", "./images/Search/Design10.png",
+                                  "./images/Search/Devops1.png","./images/Search/Devops2.png", "./images/Search/Devops3.png", "./images/Search/Devops4.png", "./images/Search/Devops5.png", "./images/Search/Devops6.png", "./images/Search/Devops7.png", "./images/Search/Devops8.png", "./images/Search/Devops9.png", "./images/Search/Devops10.png",
+                                  "./images/Search/Product1.png","./images/Search/Product2.png", "./images/Search/Product3.png", "./images/Search/Product4.png", "./images/Search/Product5.png", "./images/Search/Product6.png", "./images/Search/Product7.png", "./images/Search/Product8.png", "./images/Search/Product9.png", "./images/Search/Product10.png",
+                                 ];
                 let imageArrayLength = imageArray.length;
-                $("#output").html();
+                
                 for(var i=0;i<data.length;i++){
                     var cardDiv = document.createElement("div");
                     cardDiv.setAttribute("class", "col-md-4 col-sm-4 hero-feature");
@@ -62,7 +71,7 @@ $(function() {
                     caption.appendChild(feedDescription);
                     cardContainer.appendChild(cardDiv);
                 }
-  
+
               }
           })
           }
@@ -71,19 +80,26 @@ $(function() {
 
  // click
       $("#search").on("click", function() {
+        $(".cardContainer").empty();
+
           var searchTerm = $("#search").val();
           var url = "http://localhost:4000/search?q="+ searchTerm; 
           $.ajax({
               url: url,
               type: 'GET',
-              contentType: "application/data; charset=utf-8",
+              contentType: "application/json; charset=utf-8",
               async: false,
               dataType: "json",
 
               success: function(data, status, jqXHR) {
                   console.log(data);
-                 $("#output").html();
-                 let imageArray = ["./images/Node/Node1.png","./images/Node/Node2.png", "./images/Node/Node3.png", "./images/Node/Node4.png", "./images/Node/Node5.png", "./images/Node/Node6.png", "./images/Node/Node7.png", "./images/Node/Node8.png", "./images/Node/Node9.png", "./images/Node/Node10.png", "./images/Design/Design11.png"];
+                 //$("#output").html();
+                 let imageArray = ["./images/Search/Node1.png","./images/Search/Node2.png", "./images/Search/Node3.png", "./images/Search/Node4.png", "./images/Search/Node5.png", "./images/Search/Node6.png", "./images/Search/Node7.png", "./images/Search/Node8.png", "./images/Search/Node9.png", "./images/Search/Node10.png", "./images/Search/Design11.png",
+                 "./images/Search/Engineering1.png","./images/Search/Engineering2.jpg", "./images/Search/Engineering3.png", "./images/Search/Engineering4.png", "./images/Search/Engineering5.jpg", "./images/Search/Engineering6.jpg", "./images/Search/Engineering7.jpg", "./images/Search/Engineering8.png", "./images/Search/Engineering9.png", "./images/Search/Engineering10.jpg", "./images/Search/Engineering11.png",
+                 "./images/Search/Design1.png","./images/Search/Design2.png", "./images/Search/Design3.png", "./images/Search/Design4.png", "./images/Search/Design5.png", "./images/Search/Design6.png", "./images/Search/Design7.png", "./images/Search/Design8.png", "./images/Search/Design9.png", "./images/Search/Design10.png",
+                 "./images/Search/Devops1.png","./images/Search/Devops2.png", "./images/Search/Devops3.png", "./images/Search/Devops4.png", "./images/Search/Devops5.png", "./images/Search/Devops6.png", "./images/Search/Devops7.png", "./images/Search/Devops8.png", "./images/Search/Devops9.png", "./images/Search/Devops10.png",
+                 "./images/Search/Product1.png","./images/Search/Product2.png", "./images/Search/Product3.png", "./images/Search/Product4.png", "./images/Search/Product5.png", "./images/Search/Product6.png", "./images/Search/Product7.png", "./images/Search/Product8.png", "./images/Search/Product9.png", "./images/Search/Product10.png",
+                ];
                  let imageArrayLength = imageArray.length;
                   for(var i=0;i<data.length;i++){
                     var cardDiv = document.createElement("div");
