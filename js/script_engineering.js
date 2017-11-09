@@ -61,11 +61,19 @@ $(function() {
       $("#search").on('keypress',function(e){
           if(e.key === 'Enter'){
             e.preventDefault();
-            window.location.replace("search.html");                     
+            // window.location.replace("search.html");  
+            var searchTerm = $("#search").val();  
+            var url = "search.html?query=" + searchTerm;
+            window.location.href = url;                 
           }
       });
   // click
-     $("#search").on("click", function() {
-        window.location.replace("search.html");   
+  $("#search").on("click", function() {
+      $("#search").on("click", function() {
+        //window.location.replace("search.html");
+        var searchTerm = $("#search").val();
+        var url = "search.html?query=" + searchTerm;
+        window.location.href = url;  
       });
+    });
   });
