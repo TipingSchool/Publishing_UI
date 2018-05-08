@@ -4,7 +4,7 @@
 
 body {
     padding-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-color: #f6f6f6;
+    background-color: #e5edea;
 }
 
 body a {
@@ -21,7 +21,7 @@ body a:hover {
 }
 
 #search-button {
-    color: #FF941A;
+    color: #fec700;
     background-color: #222;
 }
 
@@ -65,6 +65,7 @@ body a:hover {
 #search-button {
     border-left: 1px solid #222;
 }
+
 
 
 .custom-thumbnail {
@@ -112,14 +113,15 @@ body a:hover {
 }
 
 .hero-feature {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #hero1 {
-        background-image: url(../images/ts600x300.jpg);
+        background-image: url(../images/cssgrid.png);
+        background-size:  contain;
         background-color: rgb(0,0,0);
-        min-height: 300px;
+        min-height: 250px;
         height: auto;
         margin-bottom: 0 !important;
         border-radius: 0px !important;
@@ -132,9 +134,10 @@ body a:hover {
 }
 
 #hero2 {
-        background-image: url(../images/ts600x300.jpg);
+        background-image: url(../images/svg.jpg);
+        background-size:  contain;
         background-color: rgb(0,0,0);
-        min-height: 300px;
+        min-height: 250px;
         height: auto;
         margin-bottom: 0 !important;
         border-radius: 0px !important;
@@ -147,9 +150,10 @@ body a:hover {
 }
 
 #hero3 {
-        background-image: url(../images/ts400x300.jpg);
+        background-image: url(../images/chat.jpg);
+        background-size:  contain;
         background-color: rgb(0,0,0);
-        min-height: 300px;
+        min-height: 250px;
         height: auto;
         border-radius: 0px !important;
         display: flex;
@@ -161,9 +165,10 @@ body a:hover {
 }
 
 #hero4 {
-        background-image: url(../images/ts400x300.jpg);
+        background-image: url(../images/asyncawait.png);
+        background-size: contain;
         background-color: rgb(0,0,0);
-        min-height: 300px;
+        min-height: 250px;
         height: auto;
         border-radius: 0px !important;
         display: flex;
@@ -177,7 +182,7 @@ body a:hover {
 #hero5 {
         background-image: url(../images/ts400x300.jpg);
         background-color: rgb(0,0,0);
-        min-height: 300px;
+        min-height: 250px;
         height: auto;
         border-radius: 0px !important;
         display: flex;
@@ -275,8 +280,9 @@ body a:hover {
 }
 
 #featured-header {
-    font-size: 56px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: white;
 }
 
@@ -324,15 +330,15 @@ body a:hover {
 }
 
 #homepage {
-    background-color: #F5791F;
+    background-color: #fec700;
 }
 
 
 
 .thumbnail {
-    box-shadow: 0 5px 6px -6px #222;
-    margin-bottom: 10px;
-    height: 375px;
+    box-shadow:0 10px 6px -6px rgb(80, 79, 79);
+    margin: 10px;
+    height:230px;
 }
 
 .thumbnail:hover{
@@ -378,7 +384,7 @@ footer {
 }
 
 #footer-container {
-    position:fixed;
+    /* position:fixed; */
     bottom:0;
     left:0;
     z-index: 2;
@@ -391,17 +397,18 @@ footer {
 }
 
 .more{
-    padding : 0 5px;
+    padding : 5px 5px;
     font-size : 25px;
     color : #FFF;
-    border : 1px solid rgb(10, 106, 184);
-    background-color : rgb(10, 106, 184);
-    border-radius: 6px;
+    border : 1px solid rgb(19, 18, 18);
+    background-color : rgba(24, 167, 185, 0.918);
+    /* border-radius: 5px; */
     width : 70px;   
     margin : 0 auto; 
     
 }
 a.more:hover{
+    color : #FFF;
     background-color: rgba(24, 167, 185, 0.918);
     border : 1px solid rgba(24, 167, 185, 0.918);
 }
@@ -414,6 +421,7 @@ a.more:visited{
 }
 
 .more-centered{
+    margin-top: 15px;
     text-align:center;
 }
 
@@ -429,7 +437,10 @@ a.backIcon:visited{
 
 
 img.imageRandom{
-    width : 70%;
+    /* width : 70%; */
+    margin-top: 10px;
+    height: 150px;
+    border-radius: 5px
 }
 
 @media (max-width: 768px){
@@ -450,7 +461,7 @@ img.imageRandom{
 .feedTitle{
     margin: 10px 0 0px 0;
     font-size : 15px;
-    font-weight : 600;
+    /* font-weight : 600; */
 }
 
 .feedDescription{

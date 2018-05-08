@@ -1,5 +1,5 @@
 let req = new XMLHttpRequest();
-req.open("GET", "http://localhost:4000/feeds/published/design", true);
+req.open("GET", "http://localhost:4000/feeds/design?state=pub", true);
 req.send();
 req.onload = function(){
    let json = JSON.parse(req.response);
@@ -35,9 +35,9 @@ req.onload = function(){
             feedTitle.setAttribute("class", "feedTitle");
             feedTitle.textContent = json[i].title;
             
-            var feedDescription = document.createElement("h3");
-            feedDescription.setAttribute("class", "feedDescription");
-            feedDescription.textContent = json[i].description.substring(0,200) + "...";
+            // var feedDescription = document.createElement("h3");
+            // feedDescription.setAttribute("class", "feedDescription");
+            // feedDescription.textContent = json[i].description.substring(0,200) + "...";
             
             
             // appending to outer card container
@@ -48,7 +48,7 @@ req.onload = function(){
             cardHyperlink.appendChild(thumbNail);
 
             caption.appendChild(feedTitle);
-            caption.appendChild(feedDescription);
+            // caption.appendChild(feedDescription);
             cardContainer.appendChild(cardDiv);
         }     
     }

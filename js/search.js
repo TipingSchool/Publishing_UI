@@ -48,7 +48,7 @@ $(function() {
       if (qsParm["query"] != null) {
 
                     $(".cardContainer").empty();
-                    var url = "http://localhost:4000/search?q="+ val; 
+                    var url = "http://localhost:4000/fsearch?q="+ val; 
                     $.ajax({
                         url: url,
                         type: 'GET',
